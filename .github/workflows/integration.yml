@@ -9,7 +9,7 @@ jobs:
         id: selftest
 
         # Put your action repo here
-        uses: lyleokoth/github-action-template@master
+        uses: lyleokoth/github-action-template@development
 
       - name: Check outputs
         run: |
