@@ -14,3 +14,19 @@ jobs:
       - name: Check outputs
         run: |
           test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
+
+name: Integration Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Self test
+        id: selftest
+        uses: lyleokoth/github-action-template@development
+        with:
+          path: "tests/valid.yaml"
+      - name: Check outputs and modified files
+        run: |
+            test "${{ steps.selftest.outputs.warnings }}" == "1"
