@@ -1,6 +1,6 @@
-name: "YAML file linter"
+name: "Lyle YAML file linter"
 description: "Lint a YAML file in your project"
-author: "Jacob Tomlinson"
+author: "Lyle Okoth"
 inputs:
   path:
     description: "Path to the YAML file to be linted"
